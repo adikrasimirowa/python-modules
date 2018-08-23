@@ -27,9 +27,6 @@ def ingredient_exists(ingr, dict):
 	       return True
 	    else:
 	        return False
-
-def flatten_pancakes(dict):
-	 coppy = dict.copy()
 	
 if __name__ == '__main__':
 	print(num_add(2, 3))
