@@ -22,11 +22,19 @@ IS_FALSE = False
 PANCAKE_INGREDIENTS = {'flour': 2, 'eggs': 4, 'milk': 200, 'butter': False, 'salt': 0.001 }
 
 def ingredient_exists(ingr, dict):
-	    if ingr in dict:
-	       return True
-	    else:
-	        return False
-	
+	if ingr in dict:
+	    return True
+	else:
+            return False
+
+def fatten_pancakes(dict):
+    INGREDIENTS = dict.copy()
+    INGREDIENTS['eggs'] = 6
+    INGREDIENTS['butter'] = True
+
+    return INGREDIENTS
+
+
 if __name__ == '__main__':
 	print(num_add(2, 3))
 	print(num_sub(3, 5))
@@ -35,4 +43,5 @@ if __name__ == '__main__':
 	print(num_floor(3, 5))
 	print(num_rem(3, 5))
 	print(ingredient_exists('coffe', PANCAKE_INGREDIENTS))
+	print(fatten_pancakes(PANCAKE_INGREDIENTS))
 

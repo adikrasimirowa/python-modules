@@ -69,26 +69,26 @@ class TestSolution(unittest.TestCase):
         }
         self.assertTrue(ingredient_exists('sugar', coffee_recipe))
 
-    # def test_fatten_pancakes(self):
-    #     TEST_INGREDIENTS = PANCAKE_INGREDIENTS.copy()
-    #     TEST_INGREDIENTS['canary'] = 404
+    def test_fatten_pancakes(self):
+        TEST_INGREDIENTS = PANCAKE_INGREDIENTS.copy()
+        TEST_INGREDIENTS['canary'] = 404
 
-    #     fat_ingredients = fatten_pancakes(TEST_INGREDIENTS)
+        fat_ingredients = fatten_pancakes(TEST_INGREDIENTS)
 
-    #     # test that result is a new dictionary
-    #     self.assertNotEqual(id(fat_ingredients), id(TEST_INGREDIENTS))
+        # test that result is a new dictionary
+        self.assertNotEqual(id(fat_ingredients), id(TEST_INGREDIENTS))
 
-    #     self.assertEqual(fat_ingredients['flour'], 2)
-    #     self.assertEqual(fat_ingredients['eggs'], 6)
-    #     self.assertEqual(fat_ingredients['milk'], 200)
-    #     self.assertTrue(fat_ingredients['butter'])
-    #     self.assertEqual(fat_ingredients['salt'], 0.001)
+        self.assertEqual(fat_ingredients['flour'], 2)
+        self.assertEqual(fat_ingredients['eggs'], 6)
+        self.assertEqual(fat_ingredients['milk'], 200)
+        self.assertTrue(fat_ingredients['butter'])
+        self.assertEqual(fat_ingredients['salt'], 0.001)
 
-    #     # test that the input parameter was used
-    #     self.assertEqual(fat_ingredients['canary'], 404)
+        # test that the input parameter was used
+        self.assertEqual(fat_ingredients['canary'], 404)
 
-    #     # test that PANCAKE_INGREDIENTS didn't change
-    #     self.test_pancake_ingredients()
+        # test that PANCAKE_INGREDIENTS didn't change
+        self.test_pancake_ingredients()
 
     # def test_add_sugar(self):
     #     TEST_INGREDIENTS = PANCAKE_INGREDIENTS.copy()
