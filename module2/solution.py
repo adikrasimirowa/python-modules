@@ -40,6 +40,13 @@ def add_sugar(dict):
 
     return INGREDIENTS
 
+def remove_salt(dict):
+    INGREDIENTS = dict.copy()
+    del INGREDIENTS['salt'] 
+
+    return INGREDIENTS
+
+
 if __name__ == '__main__':
         print(num_add(2, 3))
         print(num_sub(3, 5))
@@ -50,4 +57,5 @@ if __name__ == '__main__':
         print(ingredient_exists('coffe', PANCAKE_INGREDIENTS))
         print(fatten_pancakes(PANCAKE_INGREDIENTS))
         print(add_sugar(PANCAKE_INGREDIENTS))
+        print(remove_salt(PANCAKE_INGREDIENTS))
 

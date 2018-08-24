@@ -112,27 +112,27 @@ class TestSolution(unittest.TestCase):
         # test that PANCAKE_INGREDIENTS didn't change
         self.test_pancake_ingredients()
 
-    # def test_remove_salt(self):
-    #     TEST_INGREDIENTS = PANCAKE_INGREDIENTS.copy()
-    #     TEST_INGREDIENTS['canary'] = 404
+    def test_remove_salt(self):
+        TEST_INGREDIENTS = PANCAKE_INGREDIENTS.copy()
+        TEST_INGREDIENTS['canary'] = 404
 
-    #     no_salt = remove_salt(TEST_INGREDIENTS)
+        no_salt = remove_salt(TEST_INGREDIENTS)
 
-    #     # test that result is a new dictionary
-    #     self.assertNotEqual(id(no_salt), id(TEST_INGREDIENTS))
+        # test that result is a new dictionary
+        self.assertNotEqual(id(no_salt), id(TEST_INGREDIENTS))
 
-    #     self.assertFalse('salt' in no_salt.keys())
+        self.assertFalse('salt' in no_salt.keys())
 
-    #     self.assertEqual(no_salt['flour'], 2)
-    #     self.assertEqual(no_salt['eggs'], 4)
-    #     self.assertEqual(no_salt['milk'], 200)
-    #     self.assertFalse(no_salt['butter'])
+        self.assertEqual(no_salt['flour'], 2)
+        self.assertEqual(no_salt['eggs'], 4)
+        self.assertEqual(no_salt['milk'], 200)
+        self.assertFalse(no_salt['butter'])
 
-    #     # test that the input parameter was used
-    #     self.assertEqual(no_salt['canary'], 404)
+        # test that the input parameter was used
+        self.assertEqual(no_salt['canary'], 404)
 
-    #     # test that PANCAKE_INGREDIENTS didn't change
-    #     self.test_pancake_ingredients()
+        # test that PANCAKE_INGREDIENTS didn't change
+        self.test_pancake_ingredients()
 
     # def test_fibonacci_numbers(self):
     #     self.assertEqual(FIBONACCI_NUMBERS, [1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144])
