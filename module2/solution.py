@@ -22,7 +22,6 @@ IS_FALSE = False
 PANCAKE_INGREDIENTS = {'flour': 2, 'eggs': 4, 'milk': 200, 'butter': False, 'salt': 0.001 }
 
 def ingredient_exists(ingr, dict):
-	for ingr in dict:
 	    if ingr in dict:
 	       return True
 	    else:
@@ -35,5 +34,5 @@ if __name__ == '__main__':
 	print(num_div(3, 5))
 	print(num_floor(3, 5))
 	print(num_rem(3, 5))
-
+	print(ingredient_exists('coffe', PANCAKE_INGREDIENTS))
 
