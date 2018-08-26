@@ -46,6 +46,21 @@ def remove_salt(dict):
 
     return INGREDIENTS
 
+FIBONACCI_NUMBERS = [ 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144 ]
+
+def add_fibonacci(lst):
+        lst.extend([233])
+        return lst
+
+def fib_exists(lst, n):
+        if n in lst:
+           return True
+        else:
+           return False
+
+def which_fib(lst, n):
+        int = lst.index(n) 
+        return int
 
 if __name__ == '__main__':
         print(num_add(2, 3))
@@ -58,4 +73,7 @@ if __name__ == '__main__':
         print(fatten_pancakes(PANCAKE_INGREDIENTS))
         print(add_sugar(PANCAKE_INGREDIENTS))
         print(remove_salt(PANCAKE_INGREDIENTS))
+        print(add_fibonacci(FIBONACCI_NUMBERS))
+        print(fib_exists(FIBONACCI_NUMBERS, 2))
+        print(which_fib(FIBONACCI_NUMBERS, 1))
 

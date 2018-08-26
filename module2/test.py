@@ -134,34 +134,34 @@ class TestSolution(unittest.TestCase):
         # test that PANCAKE_INGREDIENTS didn't change
         self.test_pancake_ingredients()
 
-    # def test_fibonacci_numbers(self):
-    #     self.assertEqual(FIBONACCI_NUMBERS, [1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144])
+    def test_fibonacci_numbers(self):
+        self.assertEqual(FIBONACCI_NUMBERS, [1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144])
 
-    # def test_add_fibonacci(self):
-    #     NUMBERS = copy.deepcopy(FIBONACCI_NUMBERS)
-    #     self.assertEqual(NUMBERS, [1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144])
-    #     self.assertEqual(add_fibonacci(NUMBERS)[-1], 233)
-    #     self.assertEqual(add_fibonacci(NUMBERS)[-1], 377)
-    #     self.assertEqual(add_fibonacci(NUMBERS)[-1], 610)
+    def test_add_fibonacci(self):
+        NUMBERS = copy.deepcopy(FIBONACCI_NUMBERS)
+        self.assertEqual(NUMBERS, [1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144])
+        self.assertEqual(add_fibonacci(NUMBERS)[-1], 233)
+        self.assertEqual(add_fibonacci(NUMBERS)[-1], 377)
+        self.assertEqual(add_fibonacci(NUMBERS)[-1], 610)
 
-    # def test_fib_exists(self):
-    #     # validate input parameter is in use
-    #     self.assertIs(fib_exists([1, 1], 2), False)
+    def test_fib_exists(self):
+        # validate input parameter is in use
+        self.assertIs(fib_exists([1, 1], 2), False)
 
-    #     self.assertIs(fib_exists(FIBONACCI_NUMBERS, 0), False)
-    #     self.assertIs(fib_exists(FIBONACCI_NUMBERS, 1), True)
-    #     self.assertTrue(fib_exists(FIBONACCI_NUMBERS, 144))
+        self.assertIs(fib_exists(FIBONACCI_NUMBERS, 0), False)
+        self.assertIs(fib_exists(FIBONACCI_NUMBERS, 1), True)
+        self.assertTrue(fib_exists(FIBONACCI_NUMBERS, 144))
 
-    # def test_which_fib(self):
-    #     # validate input parameter is in use
-    #     with self.assertRaises(ValueError):
-    #         which_fib([1, 1], 2)
+    def test_which_fib(self):
+        # validate input parameter is in use
+        with self.assertRaises(ValueError):
+            which_fib([1, 1], 2)
 
-    #     self.assertEqual(which_fib(FIBONACCI_NUMBERS, 1), 1)
-    #     self.assertEqual(which_fib(FIBONACCI_NUMBERS, 55), 10)
+        self.assertEqual(which_fib(FIBONACCI_NUMBERS, 1), 1)
+        self.assertEqual(which_fib(FIBONACCI_NUMBERS, 55), 10)
 
-    #     with self.assertRaises(ValueError):
-    #         which_fib(FIBONACCI_NUMBERS, 99999)
+        with self.assertRaises(ValueError):
+            which_fib(FIBONACCI_NUMBERS, 99999)
 
 
 if __name__ == '__main__':
